@@ -7,6 +7,7 @@ A minimalistic and subtle starter WordPress theme for faster and smooth child th
 - PHP 5.4+
 - WordPress 3.6+
 - [Timber (TWIG Templates)](https://github.com/timber/timber)
+- ACF Pro
 
 
 ***

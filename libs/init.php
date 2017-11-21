@@ -21,5 +21,12 @@ foreach ( [
 	'setup',
 
 	// Widgets & Modules
+
+	// Options
+	'options/theme-settings',
+	'options/general-settings',
+	'options/related-posts',
+	'options/ads',
+
 	// Vendor
 ] as $file ) include_once( BLOOM_CHILD_LIBS_DIR . "/{$file}.php" );

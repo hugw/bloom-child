@@ -13,6 +13,7 @@ import plumber from 'gulp-plumber'
 import rename from 'gulp-rename'
 import concat from 'gulp-concat'
 import cssmin from 'gulp-minify-css'
+import autoprefixer from 'gulp-autoprefixer'
 import sass from 'gulp-sass'
 import uglify from 'gulp-uglify'
 import babel from 'gulp-babel'
@@ -55,6 +56,9 @@ gulp.task('_dev:styles', () => (
   gulp.src(config.styles.src)
     .pipe(plumber({ errorHandler: onError }))
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer({
+      browsers: ['last 2 versions'],
+    }))
     // Strip comments and keep line breaks
     .pipe(cssmin({
       keepSpecialComments: 1,
