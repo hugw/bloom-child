@@ -35,3 +35,8 @@ add_action( '_bloom_enqueue_stylesheets', function() {
 add_action( '_bloom_enqueue_scripts', function() {
 	wp_enqueue_script( 'flourish-child-theme' , BLOOM_CHILD_URL . '/assets/js/theme.min.js' );
 } );
+
+/**
+ * Hide ACF Pro settings
+ */
+add_filter('acf/settings/show_admin', '__return_false');
